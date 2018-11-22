@@ -1,0 +1,6 @@
+1、数据库采用mongodb3.4.0
+2、配置文件和安装服务参见mongod.cfg，mongodb.txt，也可使用srvanyUI-1.0将mongodb注册为服务
+3、使用robomongo-0.9管理mongo数据库
+4、python编程安装Anaconda3-4.2.0,它的python版本是3.4，匹配tensorflow1.90
+5、编辑器可使用pycharm-community
+6、以上软件在压缩包里
