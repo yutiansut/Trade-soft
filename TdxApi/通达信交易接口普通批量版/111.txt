@@ -1,0 +1,41 @@
+using System;
+namespace test
+{
+	class Program
+	{
+	static void Main(){
+	UInt16 a3 = 0x55E;
+            
+            string gpdm = "";
+	   Console.WriteLine("请输入帐号的奇数位\n"); 
+	   gpdm = Console.ReadLine();
+            string result = "";
+            for (int i = 0; i < gpdm.Length; i++)
+            {
+                bool next = true;
+                int a = gpdm[i];
+                int b = a3 >> 0x8;
+                int c = a ^ b;
+                a3 = (UInt16)(0x207F * (a3 + c) - 0x523D);
+                Char t1;
+                Char t2;
+                for (int j = 65; j < 91 && next; j++)
+                {
+                    for (int k = 90; k >= 65 && next; k--)
+                    {
+                        int temp = (1755 + c - k);
+                        if (temp % 26 == 0 && temp / 26 == j)
+                        {
+                                    result += (Char)j + "" +(Char)k;
+                                    next = false;
+                        }
+                    }
+                   
+                }
+
+            }
+Console.WriteLine("生成的密文为：\n");
+Console.WriteLine(result);
+}
+}
+}
